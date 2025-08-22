@@ -6,7 +6,15 @@ import { useSelector } from "react-redux"; // Sử dụng react-redux để conn
 import "./login.css";
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  return <>{!isLoggedIn ? <Login /> : <Itemcart />}</>;
+  return (
+  <div>
+    <div> 
+      {!isLoggedIn ? <Login /> : <Itemcart />}
+      </div>
+      <p>nguyen con trung </p>
+  </div>
+  
+  );
 }
 
 export default App;
