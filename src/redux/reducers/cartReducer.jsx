@@ -8,7 +8,7 @@ const cartReducer = (state = initialState, action) => {
     case "ADD_ORDER":
       return {
         ...state,
-        orders: [...state, action.payload],
+        orders: [...state.orders, action.payload],
       };
     default:
       return state;
